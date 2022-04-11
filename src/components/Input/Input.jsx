@@ -220,8 +220,9 @@ export const InputForm2 = ( ) => {
                                     </div>
                                     <p>Gender</p>
                                     <div className="my-3">
-                                        <label htmlFor="">Male</label>
+                                        <label htmlFor="">Male</label> 
                                         <input className="" name="gender" value='Male' onChange={e => setInput( { ...input, gender : e.target.value } )} type="radio"/>
+                                        <br /> 
                                         <label htmlFor="">Female</label>
                                         <input className="" name="gender" value='Famale' onChange={e => setInput( { ...input, gender : e.target.value } )} type="radio"/>
                                     </div>
