@@ -7,11 +7,15 @@ const Input = () => {
 
     const [love , setlove] = useState('We love JS')
   return (
-    <div className="container firstTest mt-4">
+      <>
+          <div className="container firstTest mt-4">
         <div className="row">
             <div className="col-md-4">
                 <div className="card ">
+                    <div className="card-header">
                     <h3>Input Form 1</h3>
+                    </div>
+                    
                     <div className="card-body">
                         <form action="">
                             <div className="my-3">
@@ -27,6 +31,9 @@ const Input = () => {
             </div>
         </div>
     </div>
+    
+      </>
+
   )
 }
 
@@ -45,8 +52,10 @@ export const InputForm = ( ) => {
             <div className="container firstTest mt-4">
                 <div className="row">
                     <div className="col-md-4">
-                        <div className="card p-2  ">
-                        <h3 className='text-center'>Input Form 2</h3>
+                        <div className="card   ">
+                            <div className="card-header">
+                                <h3>Input Form 2</h3>
+                            </div>
                             <div className="card-body text">
                                 <form action="">
                                     <div className="my-3">
@@ -85,6 +94,7 @@ export const InputForm = ( ) => {
                     </div>
                 </div>
             </div>
+            <hr />
         </>
     )
 
@@ -186,11 +196,14 @@ export const InputForm2 = ( ) => {
 
     return (
         <>
-            <div className="container-fluid firstTest mt-4">
+            <div className="container-fluid firstTest py-4 InputForm2 ">
                 <div className="row">
                     <div className="col-md-3">
-                        <div className="card p-2 ">
-                        <h3 className='text-center'>Input Form 3</h3>
+                        <div className="card  ">
+                            <div className="card-header">
+                            <h3 className='text-center'>Input Form 3</h3>
+                            </div>
+                        
                             <div className="card-body text">
 
                                 {
@@ -198,60 +211,47 @@ export const InputForm2 = ( ) => {
                                 }
 
                                 <form action="" onSubmit={ hundleFornSubmit }>
-                                    <div className="my-3">
+                                    <div className="my-1">
                                         <label htmlFor="">Name</label>: {name}
                                         <input className="form-control" value={ name } onChange={e => setInput(  { ...input, name : e.target.value }  )} type="text"/>
                                     </div>
-                                    <div className="my-3"> 
+                                    <div className="my-1"> 
                                         <label htmlFor="">Email</label>: { email }
                                         <input className="form-control" value={ email } onChange={e => setInput( { ...input, email : e.target.value })  } type="text"/>
                                     </div>
-                                    <div className="my-3">
+                                    <div className="my-1">
                                         <label htmlFor="">Cell</label>: { cell } 
                                         <input className="form-control" value={ cell } onChange={e => setInput( { ...input, cell : e.target.value })} type="text"/>
                                     </div>
-                                    <div className="my-3">
+                                    <div className="my-1">
                                         <label htmlFor="">User Name</label>
                                         <input className="form-control" value={ uname } onChange={e => setInput( { ...input, uname : e.target.value } )} type="text"/>
                                     </div>
-                                    <div className="my-3">
+                                    <div className="my-1">
                                         <label htmlFor="">Photo</label>
                                         <input className="form-control" value={ photo } onChange={e => setInput( { ...input, photo : e.target.value } )} type="text"/>
                                     </div>
-                                    <p>Gender</p>
-                                    <div className="my-3">
+                                    <p className='mb-0'>Gender</p>
+                                    <div className="my-1">
                                         <label htmlFor="">Male</label> 
-                                        <input className="" name="gender" value='Male' onChange={e => setInput( { ...input, gender : e.target.value } )} type="radio"/>
-                                        <br /> 
-                                        <label htmlFor="">Female</label>
-                                        <input className="" name="gender" value='Famale' onChange={e => setInput( { ...input, gender : e.target.value } )} type="radio"/>
+                                        <input className="" name="gender" value='Male' onChange={e => setInput( { ...input, gender : e.target.value } )} type="radio"/> 
+                                        
+                                        <label className='' htmlFor=""> Female</label> 
+                                         <input className="" name="gender" value='Famale' onChange={e => setInput( { ...input, gender : e.target.value } )} type="radio"/>
                                     </div>
 
-                                    <div className="my-3">
+                                    <div className="my-1">
                                         <input className="btn btn-primary w-100" value='Submit'   type="submit" />
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-2">
-                        <div className="card">
-                            <div className="card-body">
-                                <p>Name: <br /> {name}</p>
-                                <p>Email: <br /> {email}</p>
-                                <p>Cell: <br /> {cell}</p>
-                                <p>UserName: <br /> {uname}</p>
-                                <p>Gander: <br /> {gender }</p>
-                                <p>Photo</p> <br />
-                                <img src={`${photo}`} style={{width: "50px", height: "50px"}}></img>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div className="col-md-6">
+
+                    <div className="col-md-9">
                         <div className="card">
                                 <div className="card-header">
-
+                                    <h3>All Developers Data</h3>
                                 </div>
                                 <div className="card-body">
                                     <table className='w-100 table table-striped'>
@@ -294,7 +294,7 @@ export const InputForm2 = ( ) => {
                 </div>
             </div>
             
-            
+            <hr />
         </>
     )
 

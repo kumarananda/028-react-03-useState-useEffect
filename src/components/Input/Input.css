@@ -1,5 +1,18 @@
 
+.InputForm2 {
+    
+}
+.card-header  {
+    background: #EFEFBB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #bcb8e6, #cece4d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #bcb8df, #e6e68f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.firstTest {
+}
+.card-header h3 {
+    text-align: center;
+    color: rgb(211, 35, 167);
+}
+.card-body  {
+    background-color: #bcb8df;
     
 }
