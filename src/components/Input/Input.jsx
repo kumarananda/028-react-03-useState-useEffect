@@ -179,7 +179,7 @@ export const InputForm2 = ( ) => {
         })
     },[ users]) //will change after edit 
 
-
+    // DELET USEAR
     const hendleDataDelete = (id) => {
         axios.delete('http://localhost:5050/users/'+ id);
     }
